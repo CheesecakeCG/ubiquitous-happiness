@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://tracks/oval/track.obj" type="ArrayMesh" id=1]
 [ext_resource path="res://materials/roughmetal.tres" type="Material" id=2]
@@ -25,10 +25,6 @@ albedo_color = Color( 0.686275, 0.686275, 0.686275, 1 )
 albedo_texture = SubResource( 5 )
 metallic_specular = 0.7
 roughness = 0.6
-
-[sub_resource type="PhysicsMaterial" id=8]
-friction = 4.0
-rough = true
 
 [sub_resource type="ConcavePolygonShape" id=7]
 data = PoolVector3Array( 1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0, -1 )
@@ -68,7 +64,6 @@ mesh = SubResource( 3 )
 material/0 = SubResource( 6 )
 
 [node name="StaticBody" type="StaticBody" parent="Track/Mesh/MeshInstance"]
-physics_material_override = SubResource( 8 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Track/Mesh/MeshInstance/StaticBody"]
 shape = SubResource( 7 )
