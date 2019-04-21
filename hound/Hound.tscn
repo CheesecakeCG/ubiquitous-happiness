@@ -1,12 +1,13 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://hound/scripts/Hound.gd" type="Script" id=1]
 [ext_resource path="res://hound/meshs/hound.dae" type="PackedScene" id=2]
 [ext_resource path="res://hound/materials/Hound1.tres" type="Material" id=3]
 [ext_resource path="res://hound/materials/Hound2.tres" type="Material" id=4]
+[ext_resource path="res://hound/anims/run.anim" type="Animation" id=5]
 
 [sub_resource type="PhysicsMaterial" id=1]
-friction = 4.0
+friction = 5.0
 rough = true
 
 [sub_resource type="PrismMesh" id=2]
@@ -19,6 +20,13 @@ roughness = 0.0
 emission_enabled = true
 emission = Color( 0.756863, 1, 0.356863, 1 )
 emission_energy = 1.99
+emission_operator = 0
+emission_on_uv2 = false
+
+[sub_resource type="SpatialMaterial" id=7]
+emission_enabled = true
+emission = Color( 0.14902, 0.619608, 1, 1 )
+emission_energy = 10.87
 emission_operator = 0
 emission_on_uv2 = false
 
@@ -41,7 +49,6 @@ contact_monitor = true
 can_sleep = false
 axis_lock_angular_x = true
 axis_lock_angular_z = true
-angular_damp = 41.34
 script = ExtResource( 1 )
 
 [node name="DirectionIndicator" type="MeshInstance" parent="."]
@@ -59,9 +66,12 @@ transform = Transform( -1, 3.90798e-14, -8.74228e-08, -8.19467e-09, 0.995597, 0.
 [node name="Cube" parent="Mesh/Scene Root/Armature/Skeleton" index="0"]
 material/0 = ExtResource( 3 )
 material/1 = ExtResource( 4 )
+material/2 = SubResource( 7 )
 
 [node name="AnimationPlayer" parent="Mesh/Scene Root" index="1"]
+playback_default_blend_time = 0.5
 playback_speed = 2.0
+anims/run = ExtResource( 5 )
 
 [node name="CollisionShapeBody" type="CollisionShape" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.95364, 0 )
@@ -80,6 +90,7 @@ transform = Transform( -1, 4.44089e-14, -8.74228e-08, -8.19467e-09, 0.995597, 0.
 fov = 90.0
 far = 500.0
 target = NodePath("../Mesh/CameraTarget")
+speed = 3.0
 enabled = true
 
 [node name="Timer" type="Timer" parent="."]
