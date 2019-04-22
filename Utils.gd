@@ -16,7 +16,7 @@ func force_exit():
 	get_tree().quit()
 
 func pause():
-	print("Toggle Pausing")
+#	print("Toggle Pausing")
 	if (get_tree().paused):
 		get_tree().paused = false
 		pause_menu.visible = false
