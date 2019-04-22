@@ -11,8 +11,6 @@ func _ready():
 	pass
 
 func _process(delta: float) -> void:
-
-
 	if is_network_master():
 		if (Input.is_action_pressed("player_skid")):
 			rpc("_brake", kick_force / 25)
@@ -70,3 +68,4 @@ func _on_Timer_timeout() -> void:
 	rotation.z = 0
 	engine_force = 0
 	linear_velocity = Vector3()
+	angular_velocity = Vector3()
