@@ -5,6 +5,7 @@ export var jump_force : float = 10
 export var stopping_force : float = 500
 export var stopping_turn : float = PI/2
 
+onready var speed_label = $"Control/Panel/VBoxContainer/SpeedLabel"
 
 func _ready():
 	pass
@@ -25,10 +26,12 @@ func _process(delta: float) -> void:
 				else:
 					rpc("_brake", kick_force / 2)
 
-	if abs(linear_velocity.length()) > 100:
+	if abs(linear_velocity.length()) > 10:
 		$"Mesh/Scene Root/AnimationPlayer".play("run")
 	else:
 		$"Mesh/Scene Root/AnimationPlayer".stop()
+
+	speed_label.text = String(stepify(linear_velocity.length(), .01)) + " m/s"
 
 	var r = rotation
 	r.y = 0
