@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://music/ironhounds_theme.ogg" type="AudioStream" id=1]
+
+[node name="MusicPlayer" type="Node"]
+
+[node name="Playlist" type="Node" parent="."]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Playlist"]
+stream = ExtResource( 1 )
+autoplay = true
+bus = "Music"
+

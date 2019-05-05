@@ -23,6 +23,7 @@ config/icon="res://icon.png"
 
 Multiplayer="*res://Multiplayer.tscn"
 Utils="*res://Utils.tscn"
+MusicPlayer="*res://MusicPlayer.tscn"
 
 [input]
 
