@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/ironhounds_theme.ogg-090d7b7decbc2c124db23205d349b852.oggstr"
+
+[deps]
+
+source_file="res://music/ironhounds_theme.ogg"
+dest_files=[ "res://.import/ironhounds_theme.ogg-090d7b7decbc2c124db23205d349b852.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
