@@ -3,8 +3,8 @@
 [ext_resource path="res://materials/dirt.tres" type="Material" id=1]
 [ext_resource path="res://tracks/oval/track.obj" type="ArrayMesh" id=2]
 [ext_resource path="res://materials/roughmetal.tres" type="Material" id=3]
-[ext_resource path="res://props/LandMine.tscn" type="PackedScene" id=4]
-[ext_resource path="res://hound/Hound.tscn" type="PackedScene" id=5]
+[ext_resource path="res://hound/Hound.tscn" type="PackedScene" id=4]
+[ext_resource path="res://props/LandMine.tscn" type="PackedScene" id=5]
 
 [sub_resource type="PlaneMesh" id=1]
 
@@ -152,26 +152,26 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -142, 0, 0 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 7, -13 )
 shape = SubResource( 5 )
 
-[node name="LandMine" parent="Track" instance=ExtResource( 4 )]
+[node name="LandMine" parent="Track" instance=ExtResource( 5 )]
 visible = true
 
-[node name="LandMine2" parent="Track" instance=ExtResource( 4 )]
+[node name="LandMine2" parent="Track" instance=ExtResource( 5 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -117.091, 0, 7 )
 visible = true
 
-[node name="LandMine3" parent="Track" instance=ExtResource( 4 )]
+[node name="LandMine3" parent="Track" instance=ExtResource( 5 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -117.091, 0, -62.6448 )
 visible = true
 
-[node name="LandMine4" parent="Track" instance=ExtResource( 4 )]
+[node name="LandMine4" parent="Track" instance=ExtResource( 5 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -166.71, 0, -127.983 )
 visible = true
 
-[node name="LandMine5" parent="Track" instance=ExtResource( 4 )]
+[node name="LandMine5" parent="Track" instance=ExtResource( 5 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -77.2782, 7.62939e-06, -298.581 )
 visible = true
 
-[node name="LandMine6" parent="Track" instance=ExtResource( 4 )]
+[node name="LandMine6" parent="Track" instance=ExtResource( 5 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -77.2782, 7.62939e-06, -298.581 )
 visible = true
 
@@ -179,24 +179,24 @@ visible = true
 
 [node name="unclaimed" parent="Players" groups=[
 "unclaimed",
-] instance=ExtResource( 5 )]
+] instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 109, 0, 0 )
 stopping_turn = 1.5708
 
 [node name="unclaimed2" parent="Players" groups=[
 "unclaimed",
-] instance=ExtResource( 5 )]
+] instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 116, 0, 0 )
 stopping_turn = 1.5708
 
 [node name="unclaimed3" parent="Players" groups=[
 "unclaimed",
-] instance=ExtResource( 5 )]
+] instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 116, 0, 0 )
 stopping_turn = 1.5708
 
 [node name="unclaimed4" parent="Players" groups=[
 "unclaimed",
-] instance=ExtResource( 5 )]
+] instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 102, 0, 0 )
 stopping_turn = 1.5708

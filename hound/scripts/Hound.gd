@@ -71,11 +71,11 @@ func _process(delta: float) -> void:
 		if true: #!brake >= 30:
 			$"Mesh/Scene Root/AnimationPlayer".play("run")
 			$"Mesh/Scene Root/AnimationPlayer".playback_speed = min(linear_velocity.length() * .03, 2)
-			if abs(linear_velocity.length()) > 50:
-				$Camera/motion_blur.show()
-				$Camera/motion_blur.get_surface_material(0).set_shader_param("intensity", lerp(0, 0.08, linear_velocity.length_squared() / (100 * 100)))
-			else:
-				$Camera/motion_blur.hide()
+#			if abs(linear_velocity.length()) > 50:
+#				$Camera/motion_blur.show()
+#				$Camera/motion_blur.get_surface_material(0).set_shader_param("intensity", lerp(0, 0.08, linear_velocity.length_squared() / (100 * 100)))
+#			else:
+#				$Camera/motion_blur.hide()
 		else:
 #			$"Mesh/Scene Root/AnimationPlayer".play("skid")
 			pass

@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://hound/scripts/Hound.gd" type="Script" id=1]
 [ext_resource path="res://MotionTrail/MotionTrail.tscn" type="PackedScene" id=2]
@@ -11,8 +11,8 @@
 
 [sub_resource type="PrismMesh" id=1]
 
-[sub_resource type="SpatialMaterial" id=2]
-flags_transparent = true
+[sub_resource type="StandardMaterial3D" id=2]
+transparency = 1
 albedo_color = Color( 0.219608, 1, 0, 0.85098 )
 metallic = 1.0
 roughness = 0.0
@@ -22,8 +22,70 @@ emission_energy = 16.0
 emission_operator = 0
 emission_on_uv2 = false
 
-[sub_resource type="Animation" id=3]
-resource_name = "skid"
+[sub_resource type="Skin" id=3]
+bind_count = 30
+bind/0/bone = 0
+bind/0/pose = Transform( 1, -1.62106e-05, -5.06007e-07, -1.62125e-05, -0.999144, -0.0311879, 5.68224e-14, 0.0311879, -0.999514, 7.44138e-05, 4.58652, -2.35841 )
+bind/1/bone = 1
+bind/1/pose = Transform( -1, -2.03387e-06, -2.18696e-07, -2.0583e-06, 0.993904, 0.106871, -9.94391e-14, 0.106843, -0.994272, 9.14787e-06, -4.47034, -1.7022 )
+bind/2/bone = 2
+bind/2/pose = Transform( -1, -1.44163e-07, -7.10279e-15, -1.63151e-07, 0.950408, 0.309916, -2.48598e-13, 0.309812, -0.950763, 6.46026e-07, -4.25897, -1.46805 )
+bind/3/bone = 3
+bind/3/pose = Transform( -1, -1.34465e-13, -1.2647e-14, -7.15606e-13, 0.942243, -0.333959, 2.34685e-13, -0.333825, -0.942587, -3.10047e-07, -3.54858, 2.37203 )
+bind/4/bone = 4
+bind/4/pose = Transform( -1, -1.34465e-13, -1.2647e-14, -1.58931e-07, 0.673853, -0.738646, 5.46915e-13, -0.738365, -0.674093, 2.30863e-07, -1.52906, 4.6694 )
+bind/5/bone = 5
+bind/5/pose = Transform( -1, -1.42056e-13, 1.31874e-07, -1.5669e-07, 0.487028, -0.873291, 6.6056e-13, -0.872963, -0.487198, 4.12115e-12, -0.203926, 5.81496 )
+bind/6/bone = 6
+bind/6/pose = Transform( -1, -1.25526e-06, 6.06085e-14, -1.26772e-06, 0.99963, -5.95826e-08, 6.22362e-15, 1.14696e-05, -1, 7.30083e-06, -5.81405, 3.01007 )
+bind/7/bone = 7
+bind/7/pose = Transform( -0.992917, -0.0438866, -0.110396, -0.11821, 0.271958, 0.954989, -0.0118925, 0.960923, -0.275332, 1.27399, -2.48899, -3.97399 )
+bind/8/bone = 8
+bind/8/pose = Transform( 0.973005, 0.0493091, -0.22545, -0.194828, 0.698947, -0.687869, 0.123705, 0.712952, 0.689933, -0.662916, -0.795514, -3.64069 )
+bind/9/bone = 9
+bind/9/pose = Transform( -0.999524, 0.0271736, -0.0145853, -0.0129685, 0.0586995, 0.998189, 0.0279909, 0.997535, -0.0583521, 0.753184, -1.17918, -2.35153 )
+bind/10/bone = 10
+bind/10/pose = Transform( -0.999516, -0.0310894, -0.000467816, -0.0126866, 0.393738, 0.919068, -0.0283997, 0.918294, -0.394098, 0.784047, -1.35926, -0.268728 )
+bind/11/bone = 11
+bind/11/pose = Transform( -0.999131, -2.01776e-06, -0.041692, -2.60199e-06, 0.99963, -1.68211e-07, 0.041692, 1.1534e-05, -0.99913, 0.84516, 1.27695e-06, 1.4558 )
+bind/12/bone = 12
+bind/12/pose = Transform( -0.992917, 0.0438866, 0.110396, 0.11821, 0.271958, 0.954989, 0.0118925, 0.960923, -0.275333, -1.27399, -2.48899, -3.97399 )
+bind/13/bone = 13
+bind/13/pose = Transform( 0.973005, -0.0493092, 0.22545, 0.194828, 0.698948, -0.687869, -0.123705, 0.712952, 0.689933, 0.662916, -0.795514, -3.64069 )
+bind/14/bone = 14
+bind/14/pose = Transform( -0.999524, -0.0271736, 0.0145853, 0.0129685, 0.0586995, 0.998189, -0.0279908, 0.997535, -0.0583525, -0.753184, -1.17918, -2.35153 )
+bind/15/bone = 15
+bind/15/pose = Transform( -0.999516, 0.0310894, 0.000467892, 0.0126867, 0.393738, 0.919068, 0.0283996, 0.918294, -0.394098, -0.784047, -1.35926, -0.268726 )
+bind/16/bone = 16
+bind/16/pose = Transform( -0.999131, 2.01217e-06, 0.041692, 2.62555e-06, 0.99963, -2.28828e-07, -0.0416921, 1.17127e-05, -0.99913, -0.84516, 2.75612e-06, 1.4558 )
+bind/17/bone = 17
+bind/17/pose = Transform( -0.987501, 0.110434, 0.11241, 0.144243, 0.345902, 0.927065, 0.06352, 0.931352, -0.357651, -0.78401, 0.650774, -4.90963 )
+bind/18/bone = 18
+bind/18/pose = Transform( -0.99183, 0.124554, -0.0273413, -0.116603, -0.79832, 0.590447, 0.0517344, 0.588584, 0.806613, -1.03922, 2.87017, -0.218009 )
+bind/19/bone = 19
+bind/19/pose = Transform( -0.999819, -0.00308952, 0.0187753, 0.0183568, 0.103051, 0.994501, -0.00500932, 0.994299, -0.103025, -0.726206, 3.05383, -1.67266 )
+bind/20/bone = 20
+bind/20/pose = Transform( -0.999131, -7.34533e-06, 0.041692, -6.94758e-06, 0.99963, 3.86817e-07, -0.041692, 1.12998e-05, -0.999131, -0.655627, -4.62031e-06, -3.08627 )
+bind/21/bone = 21
+bind/21/pose = Transform( -0.987502, -0.110434, -0.11241, -0.144243, 0.345902, 0.927065, -0.0635201, 0.931352, -0.357651, 0.784011, 0.650773, -4.90963 )
+bind/22/bone = 22
+bind/22/pose = Transform( -0.99183, -0.124554, 0.0273413, 0.116602, -0.79832, 0.590447, -0.0517345, 0.588585, 0.806613, 1.03922, 2.87018, -0.21801 )
+bind/23/bone = 23
+bind/23/pose = Transform( -0.999819, 0.00308955, -0.0187753, -0.0183568, 0.103051, 0.994501, 0.00500929, 0.994299, -0.103025, 0.726206, 3.05383, -1.67266 )
+bind/24/bone = 24
+bind/24/pose = Transform( -0.999131, 7.37218e-06, -0.041692, 6.91768e-06, 0.99963, 4.15386e-07, 0.041692, 1.17534e-05, -0.999131, 0.655627, -5.70121e-06, -3.08627 )
+bind/25/bone = 25
+bind/25/pose = Transform( 1, 6.30086e-13, 1.64874e-13, -1.24282e-15, 0.720086, -0.693617, -1.26426e-15, 0.693353, 0.720344, -2.99951e-13, -4.89416, -1.18809 )
+bind/26/bone = 26
+bind/26/pose = Transform( 1, 6.30086e-13, 1.64874e-13, -1.10969e-15, 0.646877, -0.762399, -1.38259e-15, 0.76211, 0.647107, -2.99951e-13, -4.83437, -0.839001 )
+bind/27/bone = 27
+bind/27/pose = Transform( 1, 6.30086e-13, 1.64874e-13, -1.4037e-15, 0.807953, -0.588847, -1.08287e-15, 0.58862, 0.808245, -2.99951e-13, -4.72079, 1.04598 )
+bind/28/bone = 28
+bind/28/pose = Transform( 1, 6.30086e-13, 1.64874e-13, -1.74412e-15, 0.987989, -0.152185, -3.17791e-16, 0.152117, 0.988352, -2.99951e-13, -3.30378, 3.89025 )
+bind/29/bone = 29
+bind/29/pose = Transform( 1, 6.30086e-13, 1.64874e-13, -1.67226e-15, 0.933446, 0.357809, 5.88661e-16, -0.357688, 0.933795, -2.99951e-13, -0.617388, 5.58263 )
+
+[sub_resource type="Animation" id=4]
 length = 5.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("../../VehicleWheel3/Skid:emitting")
@@ -50,18 +112,18 @@ tracks/1/keys = {
 "values": [ true, false ]
 }
 
-[sub_resource type="CapsuleShape" id=4]
+[sub_resource type="CapsuleShape" id=5]
 radius = 1.23215
 height = 3.28116
 
-[sub_resource type="BoxShape" id=5]
+[sub_resource type="BoxShape" id=6]
 extents = Vector3( 0.935772, 1.91669, 2.45865 )
 
-[sub_resource type="CapsuleShape" id=6]
+[sub_resource type="CapsuleShape" id=7]
 radius = 0.893146
 height = 1.73183
 
-[sub_resource type="ParticlesMaterial" id=7]
+[sub_resource type="ParticlesMaterial" id=8]
 emission_shape = 4
 emission_point_count = 1
 initial_velocity = 7.69
@@ -71,26 +133,26 @@ damping = 0.88
 damping_random = 0.11
 scale_random = 0.66
 
-[sub_resource type="SphereMesh" id=8]
+[sub_resource type="SphereMesh" id=9]
 radius = 0.1
 height = 0.2
 radial_segments = 4
 rings = 2
 
-[sub_resource type="Gradient" id=9]
+[sub_resource type="Gradient" id=10]
 offsets = PoolRealArray( 0, 0.253394, 1 )
 colors = PoolColorArray( 1, 1, 1, 1, 0.533333, 0.0431373, 0.0431373, 0.290196, 0, 0, 0, 0 )
 
-[sub_resource type="GradientTexture" id=10]
-gradient = SubResource( 9 )
+[sub_resource type="GradientTexture" id=11]
+gradient = SubResource( 10 )
 
-[sub_resource type="Curve" id=11]
+[sub_resource type="Curve" id=12]
 _data = [ Vector2( 0, 1 ), 0.0, 8.01701, 0, 0, Vector2( 0.578209, 0.0885999 ), -0.181946, 0.0, 0, 0 ]
 
-[sub_resource type="CurveTexture" id=12]
-curve = SubResource( 11 )
+[sub_resource type="CurveTexture" id=13]
+curve = SubResource( 12 )
 
-[sub_resource type="ParticlesMaterial" id=13]
+[sub_resource type="ParticlesMaterial" id=14]
 spread = 180.0
 flatness = 0.27
 initial_velocity = 123.08
@@ -99,36 +161,36 @@ angular_velocity = 1.0
 damping = 1.54
 scale = 0.5
 scale_random = 1.0
-scale_curve = SubResource( 12 )
-color_ramp = SubResource( 10 )
+scale_curve = SubResource( 13 )
+color_ramp = SubResource( 11 )
 
-[sub_resource type="OpenSimplexNoise" id=14]
+[sub_resource type="OpenSimplexNoise" id=15]
 seed = 2
 octaves = 5
 period = 36.9
 persistence = 0.47
 
-[sub_resource type="NoiseTexture" id=15]
+[sub_resource type="NoiseTexture" id=16]
 seamless = true
-noise = SubResource( 14 )
+noise = SubResource( 15 )
 
-[sub_resource type="SpatialMaterial" id=16]
-flags_transparent = true
-params_blend_mode = 1
+[sub_resource type="StandardMaterial3D" id=17]
+transparency = 1
+blend_mode = 1
 albedo_color = Color( 1, 0, 0, 0.239216 )
 emission_enabled = true
 emission = Color( 1, 0.823529, 0.164706, 1 )
 emission_energy = 16.0
 emission_operator = 0
 emission_on_uv2 = false
-emission_texture = SubResource( 15 )
+emission_texture = SubResource( 16 )
 rim_enabled = true
 rim = 1.0
 rim_tint = 0.95
-rim_texture = SubResource( 15 )
+rim_texture = SubResource( 16 )
 
-[sub_resource type="SphereMesh" id=17]
-material = SubResource( 16 )
+[sub_resource type="SphereMesh" id=18]
+material = SubResource( 17 )
 radius = 2.493
 height = 4.985
 radial_segments = 16
@@ -163,6 +225,7 @@ transform = Transform( -1, 3.90798e-14, -8.74228e-08, -8.19467e-09, 0.995597, 0.
 [node name="Scene Root" parent="Mesh" instance=ExtResource( 3 )]
 
 [node name="Cube" parent="Mesh/Scene Root/Armature/Skeleton" index="0"]
+skin = SubResource( 3 )
 material/0 = ExtResource( 4 )
 material/1 = ExtResource( 5 )
 
@@ -170,19 +233,19 @@ material/1 = ExtResource( 5 )
 playback_default_blend_time = 0.5
 playback_speed = 2.0
 anims/run = ExtResource( 6 )
-anims/skid = SubResource( 3 )
+anims/skid = SubResource( 4 )
 
 [node name="CollisionShapeBody" type="CollisionShape" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.95364, 0 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="CollisionShapeFeet" type="CollisionShape" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.89623, -0.139966 )
-shape = SubResource( 5 )
+shape = SubResource( 6 )
 
 [node name="CollisionShapeHead" type="CollisionShape" parent="."]
 transform = Transform( 1, 0, 0, 0, 0.758836, 0.651281, 0, -0.651281, 0.758836, 0, 5.25984, 2.96631 )
-shape = SubResource( 6 )
+shape = SubResource( 7 )
 
 [node name="Camera" type="InterpolatedCamera" parent="."]
 transform = Transform( -1, 3.55268e-15, -8.74228e-08, -5.66356e-08, 0.76178, 0.647835, 6.6597e-08, 0.647835, -0.76178, 0, 17.8999, -9.0579 )
@@ -194,6 +257,7 @@ speed = 1.5
 enabled = true
 
 [node name="motion_blur" parent="Camera" instance=ExtResource( 7 )]
+visible = false
 
 [node name="Timer" type="Timer" parent="."]
 process_mode = 0
@@ -227,8 +291,8 @@ transform = Transform( -1, 5.01436e-08, -7.16125e-08, 0, 0.819152, 0.573576, 8.7
 amount = 64
 randomness = 0.67
 visibility_aabb = AABB( -1.95328, -1.77083, -3.29538, 3.90656, 3.78774, 7.03704 )
-process_material = SubResource( 7 )
-draw_pass_1 = SubResource( 8 )
+process_material = SubResource( 8 )
+draw_pass_1 = SubResource( 9 )
 
 [node name="VehicleWheel2" type="VehicleWheel" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.75, 0.25, 1.75 )
@@ -257,8 +321,8 @@ transform = Transform( -1, 5.01436e-08, -7.16125e-08, 0, 0.819152, 0.573576, 8.7
 amount = 64
 randomness = 0.67
 visibility_aabb = AABB( -1.95328, -1.77083, -3.29538, 3.90656, 3.78774, 7.03704 )
-process_material = SubResource( 7 )
-draw_pass_1 = SubResource( 8 )
+process_material = SubResource( 8 )
+draw_pass_1 = SubResource( 9 )
 
 [node name="Control" type="Control" parent="."]
 anchor_right = 1.0
@@ -316,8 +380,8 @@ speed_scale = 1.5
 explosiveness = 0.98
 randomness = 0.87
 visibility_aabb = AABB( -10.0543, -1.37262, -8.43723, 20.1087, 13.4698, 16.8745 )
-process_material = SubResource( 13 )
-draw_pass_1 = SubResource( 17 )
+process_material = SubResource( 14 )
+draw_pass_1 = SubResource( 18 )
 [connection signal="body_entered" from="." to="." method="_on_Hound_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="timeout" from="ResyncTimer" to="." method="_on_ResyncTimer_timeout"]
