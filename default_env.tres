@@ -47,4 +47,3 @@ glow_blend_mode = 1
 glow_hdr_threshold = 0.26
 glow_hdr_luminance_cap = 4.47
 glow_bicubic_upscale = true
-

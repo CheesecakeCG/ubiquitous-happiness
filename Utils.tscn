@@ -5,4 +5,3 @@
 [node name="Utils" type="Node"]
 pause_mode = 2
 script = ExtResource( 1 )
-

@@ -1,45 +1,24 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=11 format=2]
 
-[ext_resource path="res://tracks/oval/track.obj" type="ArrayMesh" id=1]
-[ext_resource path="res://materials/roughmetal.tres" type="Material" id=2]
-[ext_resource path="res://hound/Hound.tscn" type="PackedScene" id=3]
+[ext_resource path="res://materials/dirt.tres" type="Material" id=1]
+[ext_resource path="res://tracks/oval/track.obj" type="ArrayMesh" id=2]
+[ext_resource path="res://materials/roughmetal.tres" type="Material" id=3]
+[ext_resource path="res://props/LandMine.tscn" type="PackedScene" id=4]
+[ext_resource path="res://hound/Hound.tscn" type="PackedScene" id=5]
 
 [sub_resource type="PlaneMesh" id=1]
 
-[sub_resource type="OpenSimplexNoise" id=2]
-octaves = 6
-period = 15.1
-persistence = 0.594
-
-[sub_resource type="NoiseTexture" id=3]
-width = 256
-height = 256
-noise = SubResource( 2 )
-
-[sub_resource type="NoiseTexture" id=4]
-width = 1024
-height = 1024
-as_normalmap = true
-bump_strength = 3.6
-noise = SubResource( 2 )
-
-[sub_resource type="SpatialMaterial" id=5]
-albedo_color = Color( 0.321569, 0.290196, 0.247059, 1 )
-albedo_texture = SubResource( 3 )
-metallic_specular = 0.7
-roughness = 0.9
-normal_enabled = true
-normal_scale = 2.16
-normal_texture = SubResource( 4 )
-
-[sub_resource type="BoxShape" id=6]
+[sub_resource type="BoxShape" id=2]
 extents = Vector3( 1, 0.1, 1 )
 
-[sub_resource type="ConcavePolygonShape" id=7]
+[sub_resource type="ConcavePolygonShape" id=3]
 data = PoolVector3Array( 0, 1, -4.375, 0, 0, -4.375, 0.7665, 1, -4.2225, 0.7665, 1, -4.2225, 0, 0, -4.375, 0.7665, 0, -4.2225, 0.7665, 1, -4.2225, 0.7665, 0, -4.2225, 1.4212, 1, -3.7835, 1.4212, 1, -3.7835, 0.7665, 0, -4.2225, 1.4212, 0, -3.7835, 1.4212, 1, -3.7835, 1.4212, 0, -3.7835, 1.8725, 1, -3.0879, 1.8725, 1, -3.0879, 1.4212, 0, -3.7835, 1.8725, 0, -3.0879, 1.8725, 1, -3.0879, 1.8725, 0, -3.0879, 2.0038, 1, -2.4182, 2.0038, 1, -2.4182, 1.8725, 0, -3.0879, 2.0038, 0, -2.4182, 2.0038, 1, -2.4182, 2.0038, 0, -2.4182, 2.0038, 1, 2.4182, 2.0038, 1, 2.4182, 2.0038, 0, -2.4182, 2.0038, 0, 2.4182, -2.0038, 1, -2.4182, -2.0038, 0, -2.4182, -1.8725, 1, -3.0879, -1.8725, 1, -3.0879, -2.0038, 0, -2.4182, -1.8725, 0, -3.0879, -1.8725, 1, -3.0879, -1.8725, 0, -3.0879, -1.4212, 1, -3.7835, -1.4212, 1, -3.7835, -1.8725, 0, -3.0879, -1.4212, 0, -3.7835, -1.4212, 1, -3.7835, -1.4212, 0, -3.7835, -0.7665, 1, -4.2225, -0.7665, 1, -4.2225, -1.4212, 0, -3.7835, -0.7665, 0, -4.2225, -0.7665, 1, -4.2225, -0.7665, 0, -4.2225, 0, 1, -4.375, 0, 1, -4.375, -0.7665, 0, -4.2225, 0, 0, -4.375, 2.0038, 1, 2.4182, 2.0038, 0, 2.4182, 1.8725, 1, 3.0879, 1.8725, 1, 3.0879, 2.0038, 0, 2.4182, 1.8725, 0, 3.0879, 1.8725, 1, 3.0879, 1.8725, 0, 3.0879, 1.4212, 1, 3.7835, 1.4212, 1, 3.7835, 1.8725, 0, 3.0879, 1.4212, 0, 3.7835, 1.4212, 1, 3.7835, 1.4212, 0, 3.7835, 0.7665, 1, 4.2225, 0.7665, 1, 4.2225, 1.4212, 0, 3.7835, 0.7665, 0, 4.2225, 0.7665, 1, 4.2225, 0.7665, 0, 4.2225, 0, 1, 4.375, 0, 1, 4.375, 0.7665, 0, 4.2225, 0, 0, 4.375, 0, 1, 4.375, 0, 0, 4.375, -0.7665, 1, 4.2225, -0.7665, 1, 4.2225, 0, 0, 4.375, -0.7665, 0, 4.2225, -0.7665, 1, 4.2225, -0.7665, 0, 4.2225, -1.4212, 1, 3.7835, -1.4212, 1, 3.7835, -0.7665, 0, 4.2225, -1.4212, 0, 3.7835, -1.4212, 1, 3.7835, -1.4212, 0, 3.7835, -1.8725, 1, 3.0879, -1.8725, 1, 3.0879, -1.4212, 0, 3.7835, -1.8725, 0, 3.0879, -1.8725, 1, 3.0879, -1.8725, 0, 3.0879, -2.0038, 1, 2.4182, -2.0038, 1, 2.4182, -1.8725, 0, 3.0879, -2.0038, 0, 2.4182, -2.0038, 0, -2.4182, -2.0038, 1, -2.4182, -2.0038, 0, 2.4182, -2.0038, 0, 2.4182, -2.0038, 1, -2.4182, -2.0038, 1, 2.4182 )
 
-[sub_resource type="ConcavePolygonShape" id=8]
+[sub_resource type="ConcavePolygonShape" id=4]
 data = PoolVector3Array( 0, 1, -4.375, 0, 0, -4.375, 0.7665, 1, -4.2225, 0.7665, 1, -4.2225, 0, 0, -4.375, 0.7665, 0, -4.2225, 0.7665, 1, -4.2225, 0.7665, 0, -4.2225, 1.4212, 1, -3.7835, 1.4212, 1, -3.7835, 0.7665, 0, -4.2225, 1.4212, 0, -3.7835, 1.4212, 1, -3.7835, 1.4212, 0, -3.7835, 1.8725, 1, -3.0879, 1.8725, 1, -3.0879, 1.4212, 0, -3.7835, 1.8725, 0, -3.0879, 1.8725, 1, -3.0879, 1.8725, 0, -3.0879, 2.0038, 1, -2.4182, 2.0038, 1, -2.4182, 1.8725, 0, -3.0879, 2.0038, 0, -2.4182, 2.0038, 1, -2.4182, 2.0038, 0, -2.4182, 2.0038, 1, 2.4182, 2.0038, 1, 2.4182, 2.0038, 0, -2.4182, 2.0038, 0, 2.4182, -2.0038, 1, -2.4182, -2.0038, 0, -2.4182, -1.8725, 1, -3.0879, -1.8725, 1, -3.0879, -2.0038, 0, -2.4182, -1.8725, 0, -3.0879, -1.8725, 1, -3.0879, -1.8725, 0, -3.0879, -1.4212, 1, -3.7835, -1.4212, 1, -3.7835, -1.8725, 0, -3.0879, -1.4212, 0, -3.7835, -1.4212, 1, -3.7835, -1.4212, 0, -3.7835, -0.7665, 1, -4.2225, -0.7665, 1, -4.2225, -1.4212, 0, -3.7835, -0.7665, 0, -4.2225, -0.7665, 1, -4.2225, -0.7665, 0, -4.2225, 0, 1, -4.375, 0, 1, -4.375, -0.7665, 0, -4.2225, 0, 0, -4.375, 2.0038, 1, 2.4182, 2.0038, 0, 2.4182, 1.8725, 1, 3.0879, 1.8725, 1, 3.0879, 2.0038, 0, 2.4182, 1.8725, 0, 3.0879, 1.8725, 1, 3.0879, 1.8725, 0, 3.0879, 1.4212, 1, 3.7835, 1.4212, 1, 3.7835, 1.8725, 0, 3.0879, 1.4212, 0, 3.7835, 1.4212, 1, 3.7835, 1.4212, 0, 3.7835, 0.7665, 1, 4.2225, 0.7665, 1, 4.2225, 1.4212, 0, 3.7835, 0.7665, 0, 4.2225, 0.7665, 1, 4.2225, 0.7665, 0, 4.2225, 0, 1, 4.375, 0, 1, 4.375, 0.7665, 0, 4.2225, 0, 0, 4.375, 0, 1, 4.375, 0, 0, 4.375, -0.7665, 1, 4.2225, -0.7665, 1, 4.2225, 0, 0, 4.375, -0.7665, 0, 4.2225, -0.7665, 1, 4.2225, -0.7665, 0, 4.2225, -1.4212, 1, 3.7835, -1.4212, 1, 3.7835, -0.7665, 0, 4.2225, -1.4212, 0, 3.7835, -1.4212, 1, 3.7835, -1.4212, 0, 3.7835, -1.8725, 1, 3.0879, -1.8725, 1, 3.0879, -1.4212, 0, 3.7835, -1.8725, 0, 3.0879, -1.8725, 1, 3.0879, -1.8725, 0, 3.0879, -2.0038, 1, 2.4182, -2.0038, 1, 2.4182, -1.8725, 0, 3.0879, -2.0038, 0, 2.4182, -2.0038, 0, -2.4182, -2.0038, 1, -2.4182, -2.0038, 0, 2.4182, -2.0038, 0, 2.4182, -2.0038, 1, -2.4182, -2.0038, 1, 2.4182 )
+
+[sub_resource type="BoxShape" id=5]
+extents = Vector3( 46.6132, 10.6857, 8.27767 )
 
 [node name="Root" type="Spatial"]
 
@@ -51,36 +30,38 @@ transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 1, 0, 0 )
 [node name="MeshInstance" type="MeshInstance" parent="Track/Mesh"]
 transform = Transform( 127.89, 0, 3.78956e-14, 0, 12.789, -2.27374e-13, 2.27374e-13, 5.21065e-14, 127.89, 0, -1.27157e-06, 0 )
 mesh = SubResource( 1 )
-material/0 = SubResource( 5 )
+material/0 = ExtResource( 1 )
 
-[node name="StaticBody" type="StaticBody" parent="Track/Mesh/MeshInstance"]
+[node name="StaticBody" type="StaticBody" parent="Track/Mesh/MeshInstance" groups=[
+"track_surface",
+]]
 
 [node name="CollisionShape" type="CollisionShape" parent="Track/Mesh/MeshInstance/StaticBody"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0 )
 visible = false
-shape = SubResource( 6 )
+shape = SubResource( 2 )
 
 [node name="outertrackwall" type="MeshInstance" parent="Track/Mesh"]
 transform = Transform( 30.6, 0, 0, 0, 6, 0, 0, 0, 25.5, 0, 0, 0 )
 use_in_baked_light = true
-mesh = ExtResource( 1 )
-material/0 = ExtResource( 2 )
+mesh = ExtResource( 2 )
+material/0 = ExtResource( 3 )
 
 [node name="StaticBody" type="StaticBody" parent="Track/Mesh/outertrackwall"]
 
 [node name="CollisionShape" type="CollisionShape" parent="Track/Mesh/outertrackwall/StaticBody"]
-shape = SubResource( 7 )
+shape = SubResource( 3 )
 
 [node name="innertrackwall" type="MeshInstance" parent="Track/Mesh"]
 transform = Transform( 15.3, 0, 0, 0, 6, 0, 0, 0, 15.3, 0, 0, 0 )
 use_in_baked_light = true
-mesh = ExtResource( 1 )
-material/0 = ExtResource( 2 )
+mesh = ExtResource( 2 )
+material/0 = ExtResource( 3 )
 
 [node name="StaticBody" type="StaticBody" parent="Track/Mesh/innertrackwall"]
 
 [node name="CollisionShape" type="CollisionShape" parent="Track/Mesh/innertrackwall/StaticBody"]
-shape = SubResource( 8 )
+shape = SubResource( 4 )
 
 [node name="DirectionalLight" type="DirectionalLight" parent="Track"]
 transform = Transform( 0.133915, 0.277827, -0.951251, 0.836516, 0.482963, 0.258819, 0.531326, -0.830397, -0.167731, 1, 47, 0 )
@@ -153,8 +134,69 @@ shadow_contact = 0.73
 spot_range = 300.0
 spot_angle = 60.0
 
+[node name="StartLap" type="Area" parent="Track" groups=[
+"StartLap",
+]]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 134, 0, 10 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Track/StartLap"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 7, -13 )
+shape = SubResource( 5 )
+
+[node name="MidLap" type="Area" parent="Track" groups=[
+"MidLap",
+]]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -142, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Track/MidLap"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 7, -13 )
+shape = SubResource( 5 )
+
+[node name="LandMine" parent="Track" instance=ExtResource( 4 )]
+visible = true
+
+[node name="LandMine2" parent="Track" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -117.091, 0, 7 )
+visible = true
+
+[node name="LandMine3" parent="Track" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -117.091, 0, -62.6448 )
+visible = true
+
+[node name="LandMine4" parent="Track" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -166.71, 0, -127.983 )
+visible = true
+
+[node name="LandMine5" parent="Track" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -77.2782, 7.62939e-06, -298.581 )
+visible = true
+
+[node name="LandMine6" parent="Track" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -77.2782, 7.62939e-06, -298.581 )
+visible = true
+
 [node name="Players" type="Spatial" parent="."]
 
-[node name="Hound" parent="Players" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 102, 0, 0 )
+[node name="unclaimed" parent="Players" groups=[
+"unclaimed",
+] instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 109, 0, 0 )
+stopping_turn = 1.5708
 
+[node name="unclaimed2" parent="Players" groups=[
+"unclaimed",
+] instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 116, 0, 0 )
+stopping_turn = 1.5708
+
+[node name="unclaimed3" parent="Players" groups=[
+"unclaimed",
+] instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 116, 0, 0 )
+stopping_turn = 1.5708
+
+[node name="unclaimed4" parent="Players" groups=[
+"unclaimed",
+] instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 102, 0, 0 )
+stopping_turn = 1.5708

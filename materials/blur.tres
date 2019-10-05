@@ -12,4 +12,3 @@ void fragment() {
 [resource]
 shader = SubResource( 1 )
 shader_param/lod = 3.0
-
