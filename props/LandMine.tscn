@@ -1,0 +1,43 @@
+[gd_scene load_steps=4 format=2]
+
+[sub_resource type="GDScript" id=10]
+script/source = "extends Area
+
+# Declare member variables here. Examples:
+# var a: int = 2
+# var b: String = \"text\"
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta: float) -> void:
+#	pass
+
+
+func _on_Area_body_entered(body: Node) -> void:
+	if (body.is_in_group(\"hound\")):
+		body.die()
+		queue_free()
+"
+
+[sub_resource type="BoxShape" id=11]
+extents = Vector3( 3.13551, 1, 4.02546 )
+
+[sub_resource type="CubeMesh" id=12]
+
+[node name="LandMine" type="Area"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -140, 0, 63 )
+visible = false
+script = SubResource( 10 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+shape = SubResource( 11 )
+
+[node name="MeshInstance" type="MeshInstance" parent="CollisionShape"]
+mesh = SubResource( 12 )
+material/0 = null
+
+[connection signal="body_entered" from="." to="." method="_on_Area_body_entered"]
